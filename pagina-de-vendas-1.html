@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganhe Dinheiro pelo Celular em 7 Dias</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #00FF41;
+    --green-mid: #00C832;
+    --green-dark: #007A1E;
+    --black: #030A03;
+    --dark: #070F07;
+    --card: #0A160A;
+    --border: rgba(0,255,65,0.18);
+    --text: #E8FFE8;
+    --muted: #7FA87F;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── GRID BACKGROUND ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  section, header, footer { position: relative; z-index: 1; }
+
+  /* ── ANNOUNCEMENT BAR ── */
+  .top-bar {
+    background: var(--green);
+    color: var(--black);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: pulse-bar 2s ease-in-out infinite;
+  }
+  @keyframes pulse-bar {
+    0%,100% { opacity:1; }
+    50% { opacity:.85; }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px 80px;
+    background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(0,200,50,0.12) 0%, transparent 70%);
+  }
+
+  .hero-tag {
+    display: inline-block;
+    border: 1px solid var(--green);
+    color: var(--green);
+    padding: 6px 18px;
+    border-radius: 2px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(58px, 12vw, 130px);
+    line-height: 0.9;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .hero h1 .white { color: #fff; display: block; }
+  .hero h1 .green {
+    color: var(--green);
+    display: block;
+    text-shadow: 0 0 40px rgba(0,255,65,0.5), 0 0 80px rgba(0,255,65,0.2);
+  }
+  .hero h1 .sub {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(20px, 4vw, 42px);
+    font-weight: 900;
+    letter-spacing: 8px;
+    color: #fff;
+    margin-top: 8px;
+  }
+  .hero h1 .days {
+    display: inline-block;
+    background: var(--green);
+    color: var(--black);
+    padding: 4px 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 5vw, 52px);
+    letter-spacing: 4px;
+    margin-top: 10px;
+  }
+
+  .hero-desc {
+    max-width: 600px;
+    margin: 30px auto 0;
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-weight: 500;
+  }
+
+  /* phone mockup */
+  .phone-wrap {
+    margin: 50px auto;
+    position: relative;
+    width: 220px;
+  }
+  .phone-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,255,65,0.2) 0%, transparent 70%);
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+  @keyframes glow-pulse {
+    0%,100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: .7; }
+  }
+  .phone-box {
+    background: #0d1a0d;
+    border: 2px solid var(--green);
+    border-radius: 30px;
+    padding: 24px 18px;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(0,255,65,0.3), inset 0 0 20px rgba(0,255,65,0.05);
+    position: relative;
+  }
+  .phone-notch {
+    width: 60px;
+    height: 8px;
+    background: var(--green);
+    border-radius: 4px;
+    margin: 0 auto 20px;
+  }
+  .phone-label { font-size: 10px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+  .phone-amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    color: var(--green);
+    text-shadow: 0 0 20px rgba(0,255,65,0.6);
+    letter-spacing: 1px;
+  }
+  .phone-check {
+    width: 36px;
+    height: 36px;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px auto 0;
+    color: var(--green);
+    font-size: 18px;
+  }
+
+  /* badges */
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border);
+    background: rgba(0,255,65,0.04);
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .badge span { font-size: 18px; }
+
+  /* ── CTA BUTTON ── */
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--green-mid), var(--green));
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 20px 50px;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 8px 40px rgba(0,255,65,0.4);
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    margin-top: 40px;
+  }
+  .cta-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .cta-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 14px 50px rgba(0,255,65,0.55); }
+  .cta-btn:hover::before { opacity: 1; }
+  .cta-sub { font-size: 12px; color: var(--muted); margin-top: 12px; letter-spacing: 1px; }
+
+  /* ── SECTION WRAPPER ── */
+  .section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .section-tag {
+    display: inline-block;
+    background: rgba(0,255,65,0.1);
+    border: 1px solid var(--border);
+    color: var(--green);
+    padding: 4px 14px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 16px;
+    border-radius: 2px;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 7vw, 72px);
+    line-height: 1;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .section-title .hl { color: var(--green); }
+  .section-desc { color: var(--muted); font-size: 16px; line-height: 1.7; max-width: 580px; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--green), transparent);
+    margin: 0;
+    opacity: 0.3;
+  }
+
+  /* ── WHAT YOU'LL LEARN ── */
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 50px;
+  }
+  .day-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+  .day-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--green), transparent);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .day-card:hover { border-color: rgba(0,255,65,0.4); transform: translateY(-4px); }
+  .day-card:hover::before { opacity: 1; }
+  .day-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--green);
+    margin-bottom: 8px;
+  }
+  .day-card h3 {
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  .day-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .day-potential {
+    display: inline-block;
+    margin-top: 14px;
+    background: rgba(0,255,65,0.08);
+    border: 1px solid rgba(0,255,65,0.2);
+    padding: 4px 12px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--green);
+  }
+
+  /* ── FOR WHO ── */
+  .for-who-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .for-who-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 22px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .for-who-icon { font-size: 26px; flex-shrink: 0; }
+  .for-who-card h4 { font-size: 14px; font-weight: 800; margin-bottom: 4px; }
+  .for-who-card p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-bg {
+    background: linear-gradient(180deg, transparent, rgba(0,255,65,0.03) 50%, transparent);
+    padding: 80px 20px;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 50px auto 0;
+  }
+  .testi-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 28px;
+    position: relative;
+    transition: border-color 0.25s;
+  }
+  .testi-card:hover { border-color: rgba(0,255,65,0.35); }
+  .testi-quote {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+    line-height: 0.7;
+    color: var(--green);
+    opacity: 0.3;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+  }
+  .testi-stars { color: #FFD700; font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
+  .testi-text { font-size: 14px; line-height: 1.7; color: var(--text); margin-bottom: 20px; font-style: italic; }
+  .testi-author { display: flex; align-items: center; gap: 12px; }
+  .testi-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: rgba(0,255,65,0.1);
+    font-weight: 900;
+    color: var(--green);
+    flex-shrink: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+  }
+  .testi-name { font-weight: 800; font-size: 14px; }
+  .testi-role { font-size: 12px; color: var(--muted); }
+  .testi-earn {
+    display: inline-block;
+    background: rgba(0,255,65,0.1);
+    border: 1px solid rgba(0,255,65,0.25);
+    color: var(--green);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin-top: 6px;
+  }
+
+  /* ── RESULTS COUNTER ── */
+  .counter-strip {
+    background: rgba(0,255,65,0.06);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 40px 20px;
+  }
+  .counter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .counter-item { text-align: center; }
+  .counter-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--green);
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(0,255,65,0.4);
+  }
+  .counter-label { font-size: 12px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+
+  /* ── PRICING ── */
+  .pricing-wrap {
+    max-width: 500px;
+    margin: 50px auto 0;
+  }
+  .pricing-card {
+    background: var(--card);
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 60px rgba(0,255,65,0.15);
+  }
+  .pricing-header {
+    background: linear-gradient(135deg, #0a1f0a, #112211);
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .pricing-badge {
+    display: inline-block;
+    background: var(--green);
+    color: var(--black);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding: 4px 14px;
+    border-radius: 2px;
+    margin-bottom: 16px;
+  }
+  .pricing-title { font-family: 'Bebas Neue', sans-serif; font-size: 32px; margin-bottom: 8px; }
+  .pricing-old { font-size: 14px; color: var(--muted); text-decoration: line-through; }
+  .pricing-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: var(--green);
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(0,255,65,0.4);
+  }
+  .pricing-price sup { font-size: 28px; vertical-align: top; margin-top: 14px; display: inline-block; }
+  .pricing-price .cents { font-size: 36px; }
+  .pricing-installment { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+  .pricing-features { padding: 28px 30px; }
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,255,65,0.06);
+    font-size: 14px;
+  }
+  .feature-item:last-child { border-bottom: none; }
+  .feature-check { color: var(--green); font-size: 16px; flex-shrink: 0; }
+
+  .pricing-cta { padding: 0 30px 30px; text-align: center; }
+  .pricing-cta .cta-btn { width: 100%; display: block; margin: 0; }
+  .secure-badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .secure-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+
+  /* ── GUARANTEE ── */
+  .guarantee-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .guarantee-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,255,65,0.06), transparent);
+  }
+  .guarantee-icon { font-size: 64px; margin-bottom: 16px; }
+  .guarantee-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: var(--green);
+    margin-bottom: 12px;
+  }
+  .guarantee-text { font-size: 15px; color: var(--muted); line-height: 1.7; }
+
+  /* ── FAQ ── */
+  .faq-list { max-width: 700px; margin: 40px auto 0; }
+  .faq-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .faq-q {
+    padding: 18px 22px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.2s;
+    user-select: none;
+  }
+  .faq-q:hover { color: var(--green); }
+  .faq-icon { color: var(--green); font-size: 20px; flex-shrink: 0; transition: transform 0.25s; }
+  .faq-a {
+    display: none;
+    padding: 0 22px 18px;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .faq-item.open .faq-a { display: block; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,200,50,0.08), transparent 70%);
+  }
+  .final-cta .section-title { font-size: clamp(40px, 8vw, 90px); }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── STICKY BAR ── */
+  .sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(3,10,3,0.95);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--green);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    z-index: 100;
+    transform: translateY(100%);
+    transition: transform 0.4s;
+    flex-wrap: wrap;
+  }
+  .sticky-bar.show { transform: translateY(0); }
+  .sticky-bar p { font-size: 14px; font-weight: 700; }
+  .sticky-bar p span { color: var(--green); }
+  .sticky-bar .cta-btn { margin: 0; padding: 12px 30px; font-size: 14px; }
+
+  @media (max-width: 600px) {
+    .sticky-bar { justify-content: center; text-align: center; }
+    .pricing-card { border-radius: 8px; }
+    .guarantee-box { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">🔥 OFERTA POR TEMPO LIMITADO — GARANTA AGORA COM DESCONTO ESPECIAL</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-tag">Guia Completo — 7 Dias</div>
+  <h1>
+    <span class="white">GANHE</span>
+    <span class="green">DINHEIRO</span>
+    <span class="sub">PELO CELULAR</span>
+    <span class="days">EM 7 DIAS</span>
+  </h1>
+
+  <div class="phone-wrap">
+    <div class="phone-box">
+      <div class="phone-notch"></div>
+      <div class="phone-label">SALDO DISPONÍVEL</div>
+      <div class="phone-amount">R$ 10.450,00</div>
+      <div class="phone-check">✓</div>
+    </div>
+  </div>
+
+  <p class="hero-desc">
+    Transforme seu celular em uma máquina de fazer dinheiro. 7 métodos comprovados, passo a passo, para iniciantes do zero — sem experiência e sem investimento inicial.
+  </p>
+
+  <div class="badges">
+    <div class="badge"><span>📱</span> 100% pelo Celular</div>
+    <div class="badge"><span>✅</span> Métodos Comprovados</div>
+    <div class="badge"><span>🎯</span> Para Iniciantes do Zero</div>
+    <div class="badge"><span>📈</span> Resultados Reais</div>
+  </div>
+
+  <a href="SEU_LINK_DE_PAGAMENTO_AQUI" class="cta-btn" id="hero-cta">
+    ⚡ QUERO COMEÇAR AGORA
+  </a>
+  <p class="cta-sub">🔒 Compra 100% Segura · Acesso Imediato</p>
+</header>
+
+<div class="divider"></div>
+
+<!-- COUNTERS -->
+<div class="counter-strip fade-up">
+  <div class="counter-grid">
+    <div class="counter-item">
+      <div class="counter-num">+12.400</div>
+      <div class="counter-label">Alunos Ativos</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num">7</div>
+      <div class="counter-label">Métodos Comprovados</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num">R$0</div>
+      <div class="counter-label">Investimento Inicial</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num">4.9★</div>
+      <div class="counter-label">Avaliação Média</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WHAT YOU LEARN -->
+<div class="section fade-up">
+  <div class="section-tag">O Que Você Vai Aprender</div>
+  <h2 class="section-title">7 DIAS, <span class="hl">7 MÉTODOS</span></h2>
+  <p class="section-desc">Cada dia um método diferente, com passo a passo detalhado e dicas práticas que realmente funcionam.</p>
+
+  <div class="days-grid">
+    <div class="day-card">
+      <div class="day-num">DIA 01</div>
+      <h3>Marketing de Afiliados</h3>
+      <span class="day-potential">Até R$ 8.000/mês</span>
+    </div>
+    <div class="day-card">
+      <div class="day-num">DIA 02</div>
+      <h3>Serviços Online (Freela)</h3>
+      <span class="day-potential">Até R$ 5.000/mês</span>
+    </div>
+    <div class="day-card">
+      <div class="day-num">DIA 03</div>
+      <h3>Venda de Produtos Físicos</h3>
+      <span class="day-potential">Até R$ 6.000/mês</span>
+    </div>
+    <div class="day-card">
+      <div class="day-num">DIA 04</div>
+      <h3>Criador de Conteúdo</h3>
+      <span class="day-potential">Até R$ 15.000+/mês</span>
+    </div>
+    <div class="day-card">
+      <div class="day-num">DIA 05</div>
+      <h3>Dropshipping</h3>
+      <span class="day-potential">Até R$ 10.000/mês</span>
+    </div>
+    <div class="day-card">
+      <div class="day-num">DIA 06</div>
+      <h3>Pesquisas & Microtarefas</h3>
+      <span class="day-potential">Até R$ 1.200/mês</span>
+    </div>
+    <div class="day-card" style="grid-column: 1 / -1; max-width: 400px; margin: 0 auto;">
+      <div class="day-num">DIA 07</div>
+      <h3>Venda de Infoprodutos</h3>
+      <span class="day-potential">Até R$ 30.000+/mês</span>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- FOR WHO -->
+<div class="section fade-up">
+  <div class="section-tag">Para Quem É</div>
+  <h2 class="section-title">ESSE GUIA É <span class="hl">PARA VOCÊ</span></h2>
+
+  <div class="for-who-grid">
+    <div class="for-who-card">
+      <div class="for-who-icon">🚀</div>
+      <div>
+        <h4>Iniciantes do Zero</h4>
+        <p>Nunca ganhou nada na internet e não sabe por onde começar.</p>
+      </div>
+    </div>
+    <div class="for-who-card">
+      <div class="for-who-icon">💼</div>
+      <div>
+        <h4>Quem Quer Renda Extra</h4>
+        <p>Tem emprego mas quer ganhar mais nos fins de semana e à noite.</p>
+      </div>
+    </div>
+    <div class="for-who-card">
+      <div class="for-who-icon">🏠</div>
+      <div>
+        <h4>Dona de Casa</h4>
+        <p>Quer gerar renda sem sair de casa, no tempo livre.</p>
+      </div>
+    </div>
+    <div class="for-who-card">
+      <div class="for-who-icon">🎓</div>
+      <div>
+        <h4>Jovens e Estudantes</h4>
+        <p>Quer independência financeira antes mesmo de entrar no mercado.</p>
+      </div>
+    </div>
+    <div class="for-who-card">
+      <div class="for-who-icon">📉</div>
+      <div>
+        <h4>Desempregados</h4>
+        <p>Perdeu o emprego e precisa de uma fonte de renda urgente.</p>
+      </div>
+    </div>
+    <div class="for-who-card">
+      <div class="for-who-icon">🌱</div>
+      <div>
+        <h4>Quem Quer Liberdade</h4>
+        <p>Sonha em trabalhar de onde quiser, no próprio horário.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials-bg fade-up">
+  <div style="max-width:1000px; margin:0 auto; text-align:center; padding: 0 20px;">
+    <div class="section-tag">Depoimentos Reais</div>
+    <h2 class="section-title">QUEM JÁ <span class="hl">TRANSFORMOU</span> A VIDA</h2>
+    <p class="section-desc" style="margin:0 auto;">Pessoas comuns, celular na mão, resultados reais. Veja o que estão falando:</p>
+  </div>
+
+  <div class="testimonials-grid">
+
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Comecei o Dia 1 sem acreditar muito, honestamente. Em 3 semanas fazendo afiliados no TikTok, já tinha pago minha conta de luz e o mercado do mês. O guia é muito direto ao ponto, sem enrolação.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">C</div>
+        <div>
+          <div class="testi-name">Carla Mendes</div>
+          <div class="testi-role">Auxiliar administrativa, SP</div>
+          <div class="testi-earn">+R$ 890 no 1º mês</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Fazia pesquisas por semanas sem resultado. Aí li o guia, mudei de método para freela no Canva e do nada comecei a ter clientes. Hoje cuido de 4 perfis de Instagram e ganho mais do que no meu emprego fixo.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">R</div>
+        <div>
+          <div class="testi-name">Rodrigo Alves</div>
+          <div class="testi-role">Ex-operador de telemarketing, MG</div>
+          <div class="testi-earn">+R$ 2.100/mês</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Sou mãe solo, fico em casa com meu filho pequeno e não tinha como trabalhar fora. Esse guia me mostrou o dropshipping de produtos de beleza. Em 45 dias já bati R$ 3.200 de faturamento. É real!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">J</div>
+        <div>
+          <div class="testi-name">Juliana Ferreira</div>
+          <div class="testi-role">Mãe solo, RJ</div>
+          <div class="testi-earn">R$ 3.200 em 45 dias</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Tinha 19 anos quando comprei. Segui o Dia 7 e criei um ebook de receitas fit. Vendi para 80 pessoas no primeiro mês só pelo Instagram. Com R$ 27 cada, você faz as contas. Melhor investimento da vida.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">L</div>
+        <div>
+          <div class="testi-name">Lucas Prado</div>
+          <div class="testi-role">Estudante universitário, PR</div>
+          <div class="testi-earn">+R$ 2.160 no lançamento</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Fui demitida em março e precisava de uma saída rápida. Em 2 dias li o guia inteiro, escolhi o marketing de afiliados e comecei a postar no WhatsApp. No fim do mês tinha R$ 1.300 na conta. Salvou meu mês.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">P</div>
+        <div>
+          <div class="testi-name">Patrícia Souza</div>
+          <div class="testi-role">Ex-analista de vendas, BA</div>
+          <div class="testi-earn">R$ 1.300 no 1º mês</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Tentei vários cursos de R$ 500 que não me ensinaram metade do que esse guia tem. O passo a passo é claro, funciona de verdade e você começa a ver resultado rápido. Recomendo demais!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">M</div>
+        <div>
+          <div class="testi-name">Marcos Oliveira</div>
+          <div class="testi-role">Motorista de aplicativo, SP</div>
+          <div class="testi-earn">Renda extra de R$ 1.500/mês</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PRICING -->
+<div class="section fade-up" style="text-align:center;">
+  <div class="section-tag">Oferta Especial</div>
+  <h2 class="section-title">COMECE <span class="hl">HOJE</span></h2>
+  <p class="section-desc" style="margin:0 auto;">Acesso imediato a todos os 7 métodos com bônus exclusivos.</p>
+
+  <div class="pricing-wrap">
+    <div class="pricing-card">
+      <div class="pricing-header">
+        <div class="pricing-badge">🔥 OFERTA ESPECIAL</div>
+        <div class="pricing-title">GUIA COMPLETO — 7 DIAS</div>
+        <div class="pricing-old">De R$ 97,00</div>
+        <div class="pricing-price"><sup>R$</sup>27<span class="cents">,99</span></div>
+        <div class="pricing-installment">Pagamento único · Acesso vitalício</div>
+      </div>
+
+      <div class="pricing-features">
+        <div class="feature-item"><span class="feature-check">✅</span> 7 Métodos com passo a passo completo</div>
+        <div class="feature-item"><span class="feature-check">✅</span> Plataformas gratuitas para começar hoje</div>
+        <div class="feature-item"><span class="feature-check">✅</span> Dicas de ouro em cada método</div>
+        <div class="feature-item"><span class="feature-check">✅</span> Comparativo para escolher o método ideal</div>
+        <div class="feature-item"><span class="feature-check">✅</span> Os 7 erros que travam iniciantes (evite todos)</div>
+        <div class="feature-item"><span class="feature-check">✅</span> Acesso imediato após pagamento</div>
+        <div class="feature-item"><span class="feature-check">✅</span> Funciona 100% pelo celular</div>
+      </div>
+
+      <div class="pricing-cta">
+        <a href="SEU_LINK_DE_PAGAMENTO_AQUI" class="cta-btn" id="price-cta">
+          ⚡ QUERO MINHA CÓPIA AGORA
+        </a>
+        <div class="secure-badges">
+          <div class="secure-item">🔒 Pagamento Seguro</div>
+          <div class="secure-item">📲 Acesso Imediato</div>
+          <div class="secure-item">🔄 7 Dias de Garantia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- GUARANTEE -->
+<div class="section fade-up" style="text-align:center;">
+  <div class="section-tag">Nossa Garantia</div>
+  <h2 class="section-title">RISCO <span class="hl">ZERO</span></h2>
+
+  <div class="guarantee-box">
+    <div class="guarantee-icon">🛡️</div>
+    <div class="guarantee-title">GARANTIA DE 7 DIAS</div>
+    <p class="guarantee-text">
+      Se você aplicar os métodos nos primeiros 7 dias e não ver nenhum resultado, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. Você não tem nada a perder — só a ganhar.
+    </p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<div class="section fade-up" style="text-align:center;">
+  <div class="section-tag">Dúvidas Frequentes</div>
+  <h2 class="section-title">PERGUNTAS <span class="hl">E RESPOSTAS</span></h2>
+
+  <div class="faq-list" style="text-align:left;">
+
+    <div class="faq-item">
+      <div class="faq-q">Preciso ter experiência para começar? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Não! O guia foi criado especificamente para quem nunca ganhou um centavo na internet. Cada método começa do zero absoluto com instruções claras e simples.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Preciso investir dinheiro para começar? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Todos os 7 métodos têm opção 100% gratuita. Você pode começar sem investir nada além do valor do guia. Conforme você for ganhando, pode reinvestir para escalar.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Funciona mesmo pelo celular, sem computador? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Sim! Todos os métodos foram pensados para serem executados 100% pelo smartphone. Você não precisa de computador, notebook ou nenhum equipamento especial.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Em quanto tempo verei resultados? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Depende do método e do esforço aplicado. Pesquisas e microtarefas geram resultado no mesmo dia. Afiliados e freela costumam ter primeiros resultados entre 7 e 30 dias com consistência.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Como recebo o acesso após a compra? <span class="faq-icon">+</span></div>
+      <div class="faq-a">O acesso é imediato! Logo após a confirmação do pagamento você recebe o link de download por e-mail. Em menos de 5 minutos você já está lendo o guia.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Isso é pirâmide ou esquema? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Não. São métodos legais e comprovados que milhares de brasileiros usam todos os dias: vender produtos, prestar serviços, criar conteúdo e desenvolver negócios digitais legítimos.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="final-cta fade-up">
+  <div class="section-tag">Última Chance</div>
+  <h2 class="section-title">A SUA VEZ <span class="hl">COMEÇA</span><br>AGORA</h2>
+  <p style="color:var(--muted); font-size:16px; max-width:500px; margin:16px auto 0; line-height:1.7;">
+    Mais de 12.000 pessoas já transformaram o celular em fonte de renda. O único ingrediente que falta é a sua ação.
+  </p>
+  <a href="SEU_LINK_DE_PAGAMENTO_AQUI" class="cta-btn" id="final-cta">
+    ⚡ QUERO COMEÇAR AGORA — R$ 27,99
+  </a>
+  <p class="cta-sub">🔒 Compra Segura · Acesso Imediato · Garantia de 7 Dias</p>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <p>🔥 <span>Ganhe Dinheiro pelo Celular em 7 Dias</span> — Apenas R$ 27</p>
+  <a href="SEU_LINK_DE_PAGAMENTO_AQUI" class="cta-btn" id="sticky-cta">GARANTIR AGORA</a>
+</div>
+
+<div class="divider"></div>
+
+<footer>
+  © 2025 — Ganhe Dinheiro pelo Celular em 7 Dias — Todos os direitos reservados<br>
+  Os resultados variam conforme o esforço e dedicação de cada pessoa.
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+
+  // Scroll animations
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Sticky bar
+  const sticky = document.getElementById('stickyBar');
+  window.addEventListener('scroll', () => {
+    sticky.classList.toggle('show', window.scrollY > 600);
+  });
+</script>
+
+</body>
+</html>
